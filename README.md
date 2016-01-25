@@ -5,14 +5,16 @@
 [Docker](http://www.docker.com/) is a manager for the containment of applications. Tugboat is a small library
 that speaks the docker protocol for moving applications and containers in and out of your local seaport.
 
+Fork of [softprops/tugboat](https://github.com/softprops/tugboat).
+
 ## install
 
 Add the following to your sbt project definition
 
 ```scala
-resolvers += "softprops-maven" at "http://dl.bintray.com/content/softprops/maven"
+resolvers += "seance-maven" at "http://dl.bintray.com/content/seance/maven"
 
-libraryDependencies += "me.lessis" %% "tugboat" % "0.2.0"
+libraryDependencies += "io.github.seance" %% "tugboat" % "0.3.0"
 ```
 
 ## usage

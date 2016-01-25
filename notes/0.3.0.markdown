@@ -1,0 +1,7 @@
+Fork of softprops/tugboat.
+
+- Support for AsyncHttpClient 1.9 added
+- Use map instead of array for ExposedPorts and Volumes (Docker API 1.7 compatibility)
+
+This forked version contains essentially the pull requests #16 and #19 from the original repo.
+

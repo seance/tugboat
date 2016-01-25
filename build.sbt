@@ -1,12 +1,12 @@
-organization := "me.lessis"
+organization := "io.github.seance"
 
 name := "tugboat"
 
-version := "0.2.0"
+version := "0.3.0"
 
 description := "a small boat that maneuvers docker vessels"
 
-crossScalaVersions ++= Seq("2.10.4", "2.11.4")
+crossScalaVersions ++= Seq("2.10.4", "2.11.5")
 
 scalaVersion := crossScalaVersions.value.last
 
@@ -17,7 +17,6 @@ scalacOptions in ThisBuild ++= Seq(Opts.compile.deprecation) ++
 libraryDependencies ++= Seq(
   "com.github.jnr" % "jnr-unixsocket" % "0.3",
   "org.bouncycastle" % "bcprov-jdk16" % "1.46",
-//  "org.bouncycastle" % "bcpg-jdk15on" % "1.51",
   "net.databinder.dispatch" %% "dispatch-json4s-native" % "0.11.3",
   "org.kamranzafar" % "jtar" % "2.2",
   "me.lessis" %% "unisockets-netty" % "0.1.0",
@@ -34,7 +33,7 @@ buildInfoKeys := Seq[BuildInfoKey](version)
 buildInfoPackage := "tugboat"
 
 licenses := Seq(
-  ("MIT", url(s"https://github.com/softprops/${name.value}/blob/${version.value}/LICENSE")))
+  ("MIT", url(s"https://github.com/seance/${name.value}/blob/${version.value}/LICENSE")))
 
 bintraySettings
 
@@ -48,13 +47,18 @@ externalResolvers in LsKeys.lsync := (resolvers in bintray.Keys.bintray).value
 
 pomExtra := (
   <scm>
-    <url>git@github.com:softprops/{name.value}.git</url>
-    <connection>scm:git:git@github.com:softprops/{name.value}.git</connection>
+    <url>git@github.com:seance/{name.value}.git</url>
+    <connection>scm:git:git@github.com:seance/{name.value}.git</connection>
   </scm>
   <developers>
+    <developer>
+      <id>seance</id>
+      <name>Jukka Viinamäki</name>
+      <url>https://github.com/seance</url>
+    </developer>
     <developer>
       <id>softprops</id>
       <name>Doug Tangren</name>
       <url>https://github.com/softprops</url>
     </developer>
-  </developers><url>https://github.com/softprops/{name.value}</url>)
+  </developers><url>https://github.com/seance/{name.value}</url>)
