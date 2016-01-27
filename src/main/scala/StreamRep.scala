@@ -52,10 +52,10 @@ object StreamRep {
           JObject(r)                  <- parse(str)
           ("status", JString(status)) <- r
           ("id", JString(id))         <- r
-          ("from", JString(from))     <- r
           ("time", JInt(time))        <- r
+          from = r.collectFirst { case JField("from", JString(from)) => from }
         } yield Event.Record(
-          status, id, from, time.toLong * 1000)).head
+          status, id, from getOrElse "", time.toLong * 1000)).head
       }
     }
 
