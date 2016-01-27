@@ -2,7 +2,7 @@ organization := "io.github.seance"
 
 name := "tugboat"
 
-version := "0.3.0"
+version := "0.3.1"
 
 description := "a small boat that maneuvers docker vessels"
 
